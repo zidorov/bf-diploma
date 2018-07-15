@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diploma</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/web3.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="frame">
+    <label>
+        <div>Contract owner: <span id="contractOwner">0x...</span></div>
+        <div>Number of issuers: <span id="numberOfIssuers">0</span></div>
+        <div>Number of diplomas issued: <span id="numberOfDiplomas">0</span></div>
+    </label>
+</div>
+<br />
+<div class="frame">
+    <label>
+        <label>Admin manager:</label><br />
+        <input class="inputfield" id="_admin" placeholder="0x375F3957fbd1b616BECeE145B96F77f7Cb2563ec" size="45" /><br />
+        <span><button id="addAdmin">Add admin</button>
+              <button id="removeAdmin">Remove admin</button>
+              <button id="checkIfAdmin">Check if admin</button>&nbsp;<span id="adminResult"></span></span>
+    </label>
+</div>
+<br />
+<div class="frame">
+    <label>
+        <label>Add issuer (only admins):</label><br />
+        <input class="inputfield" id="_issuer" placeholder="0x375F3957fbd1b616BECeE145B96F77f7Cb2563ec" size="45" /><br />
+        <input class="inputfield" id="_issuerName" placeholder="Stanford" size="45" /><br />
+        <input class="inputfield" id="_issuerWebDomain" placeholder="stanford.edu" size="45" /><br /><br />
+        <span><button id="registerIssuer">Add issuer</button>&nbsp;
+              <a href="#" id="registerIssuerHref" target="_blank" hidden>
+              <img src="img/wait.gif" id="registerIssuerImg" width="40" />
+              </a>
+              <span id="registerIssuerResult"></span>
+        </span>
+    </label>
+</div>
+<div class="frame">
+    <label>Issuers list:</label><br />
+    <div id="issuersList"></div>
+</div>
+<br />
+<div class="frame">
+    <label>
+        <label>Register diploma (only issuers):</label><br />
+        <input class="readonlyfield" id="rd_issuer" placeholder="" size="45" readonly /><br />
+        <input class="inputfield" id="rd_studentName" placeholder="student name" size="45" /><br />
+        <input class="inputfield" id="rd_diplomaID" placeholder="diploma ID" size="45" /><br />
+        <input class="inputfield" id="rd_diplomaDate" placeholder="diploma date" size="15" /><br /><br />
+        <span><button id="registerDiploma">Register diploma</button>&nbsp;<span id="registerDiplomaResult"></span></span>
+    </label>
+</div>
+<div class="frame">
+    <label>
+        <label>Check diploma:</label><br />
+        <input class="inputfield" id="cd_studentName" placeholder="student name" size="45" /><br />
+        <input class="inputfield" id="cd_diplomaID" placeholder="diploma ID" size="45" /><br />
+        <input class="inputfield" id="cd_diplomaDate" placeholder="diploma date" size="15" /><br /><br />
+        <span><button id="checkDiploma">Check diploma</button>&nbsp;<span id="checkDiplomaResult"></span></span>
+    </label>
+</div>
+
+</body>
+</html>
